@@ -18,14 +18,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Ramen Map</a>
+      <%= link_to "神戸 ラーメンマップ",root_path,:class => "navbar-brand" %>
   </div>
     
   <div class="collapse navbar-collapse" id="navbarEexample1">
        <ul class="nav navbar-nav">
-        <li><a href="#">Test:A</a></li>
-        <li class="active"><a href="#">Test:Ｂ</a></li>
-        <li><a href="#">Test:Ｃ</a></li>
+         <li><%= link_to "店舗追加",:controller => "map",:action => "new" %></li>
       </ul>
     </div>
   </div>

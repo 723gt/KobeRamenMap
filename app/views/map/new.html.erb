@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-3 col-md-offset-3">
+    <%= bootstrap_form_for @shop, 
+      :url => {:action => "create"},
+      :html => {:class => "text-center"} do |s| %>
+      <%= s.text_field :name %>
+      <%= s.select :address,$ward %>
+      <%= s.text_field :price %>
+      <%= s.collection_select :genre,@genre,:genre,:genre %>
+      <%= s.submit "登録" %>
+    <% end %>
+  </div>
+</div>
+
+
+                        
