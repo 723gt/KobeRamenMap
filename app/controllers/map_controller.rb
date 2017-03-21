@@ -32,6 +32,6 @@ class MapController < ApplicationController
   end
   private
   def shop_add
-     params.require(:shop).permit(:name,:address,:praice,:genre,:url)
+     params.require(:shop).permit(:name,:address,:price,:genre,:url)
   end
 end
