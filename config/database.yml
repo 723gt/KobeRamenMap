@@ -21,7 +21,8 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   database: d3t48ch1d63b2
   username: czdbowfigjuypg
-  password: ac633f3d78a81d6c25dd23540e3bdfcfc4b3c9251ad99a73b1848ee3b678f3be pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  password: ac633f3d78a81d6c25dd23540e3bdfcfc4b3c9251ad99a73b1848ee3b678f3be
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
