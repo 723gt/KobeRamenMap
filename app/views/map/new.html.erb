@@ -3,10 +3,11 @@
     <%= bootstrap_form_for @shop, 
       :url => {:action => "create"},
       :html => {:class => "text-center"} do |s| %>
-      <%= s.text_field :name %>
-      <%= s.select :address,$ward %>
-      <%= s.text_field :price %>
-      <%= s.collection_select :genre,@genre,:genre,:genre %>
+      <%= s.text_field :name,:label => "店舗名" %>
+      <%= s.select :address,$ward,:label => "区" %>
+      <%= s.text_field :url,:label => "店舗Webサイト" %>
+      <%= s.text_field :price,:label => "価格帯" %>
+      <%= s.collection_select :genre,@genre,:genre,:genre,:label => "ジャンル" %>
       <%= s.submit "登録" %>
     <% end %>
   </div>
