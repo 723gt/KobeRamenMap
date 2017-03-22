@@ -1,8 +1,14 @@
 <div class="row">
+  <h1 class="text-center">
+    <%= @serch_ward %>
+  </h1>
+</div>
+
+<div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= bootstrap_form_for @serch_form,:url => root_path,
       :html => {:class => "text-center"},method: :get do |s| %>
-      <%= s.select :address,$ward %>
+      <%= s.select :address,$ward,:label => "区選択" %>
       <%= s.submit "検索" %>
     <% end %>
   </div>
