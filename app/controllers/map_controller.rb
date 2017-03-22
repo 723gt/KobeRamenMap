@@ -6,11 +6,11 @@ class MapController < ApplicationController
     session[:err_msg] = nil
     @serch_form = Shop.new params[:address]
     if params[:shop].nil?
-      serch_ward = "中央区"
+      @serch_ward = "中央区"
     else
-      serch_ward = params[:shop][:address]
+      @serch_ward = params[:shop][:address]
     end
-    @shop = Shop.where("address = '#{serch_ward}'")
+    @shop = Shop.where("address = '#{@serch_ward}'")
   end
 
   def new
